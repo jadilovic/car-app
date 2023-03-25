@@ -9,7 +9,7 @@ router.get('/posts', async (req, res) => {
 	try {
 		const posts = await Post.find();
 		return res.status(200).json({
-			data: posts,
+			posts,
 			success: true,
 		});
 	} catch (error) {
